@@ -7,12 +7,6 @@ var Poeng = 0;
 var PoengSteder = new Array();
 
 
-//https://docs.google.com/spreadsheets/d/1ZEYjoiPVmdHtFf7VbqV0X604rvhG97Ce2W_iPdopeI0/edit#gid=0&range=A1
-
-//https://spreadsheets.google.com/feeds/list/1ZEYjoiPVmdHtFf7VbqV0X604rvhG97Ce2W_iPdopeI0/od6/public/values?alt=json
-
-//https://docs.google.com/spreadsheets/d/1ZEYjoiPVmdHtFf7VbqV0X604rvhG97Ce2W_iPdopeI0/pubhtml
-
 var marker = new Array;
 var Steder = new Array;
 Steder[0] = {navn:"Ibsenhuset", lat:59.207864, lng:9.603876, åpenFra:"12.00",åpenTil:"19.00",Info:"<img src='Bilder/ibsenhuset.PNG'><p>Opplev kultur-norge slik du aldri har sett det før!</p>", filter:"kunst", synlighet:0};
@@ -25,12 +19,8 @@ Steder[5] = {navn:"Rådhuset", lat:59.208888, lng:9.605111, åpenFra:"08.00",åp
 window.onload = oppstart; //Dette får funksjonen oppstart til å kjøre med en gang html dokumentet er ferdig lastet
 
 function oppstart() { //Inne i denne funksjonen er kode som aktiveres med en gang html-dokumentet er ferdig lastet
-  //document.getElementById("filterKnapp").onclick = filterFunksjon;
   myMap();
-  // var sheeturl = "https://spreadsheets.google.com/feeds/list/1ZEYjoiPVmdHtFf7VbqV0X604rvhG97Ce2W_iPdopeI0/od6/public/values?alt=json";
-  // $.ajax("https://spreadsheets.google.com/feeds/list/1ZEYjoiPVmdHtFf7VbqV0X604rvhG97Ce2W_iPdopeI0/od6/public/values?alt=json", function(data) {
-  //     console.log(data.feed.entry[0]['gsx$title']['$t']);
-  // })
+ 
   document.getElementById("kafe").onclick = function(){filterFunksjon("kafe")};
   document.getElementById("kunst").onclick = function(){filterFunksjon("kunst")};
   document.getElementById("butikker").onclick = function(){filterFunksjon("butikker")};
